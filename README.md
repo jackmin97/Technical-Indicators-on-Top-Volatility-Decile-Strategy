@@ -24,21 +24,18 @@ The following methods/properties are used.
 5. show: To display the graph
 
 # 3. Form the portfolio
+
 1. Get the stock data from 2019 onwards. We want to separate the period used for volatility calculation and strategy returns calculations. This is done to avoid look-ahead bias.
-
 2. Calculate the daily percentage change of each stock.
-
 3. Compute mean returns for each day. This will be the portfolio returns.
-
 4. Then, compute the cumulative returns. This will indicate how the portfolio value has changed over the period.
 
 Note: Cumulative returns is the total change in the price of our portfolio over the set time period. Thus, we use the cumprod() method on our portfolio. Also, we are adding 1 to the portfolio as we assume that we started trading with $1 and not $0.
 
 # 5. Trading signals and performance analytics: Moving Average
+
 1. Moving average: Calculate the 10 days simple moving average of the portfolio value.
-
 2. Trading signal: Set the signal as 1 when the portfolio value is more than the simple moving average. If this condition is not satisfied, the signal will return 0, which means no position. If we are already long, then 0 would imply an exit.
-
 3. Strategy returns: Multiply the strategy returns with portfolio returns.
 
 The following methods/properties are used.
@@ -60,9 +57,7 @@ value_if_false: Value if the condition is not satisfied
 For the plotted portfolio:
 
 1. The blue line indicates the portfolio value.
-
 2. The grey dashed line indicates the signal. The value of 1 indicates long and 0 indicates no position. If we are already long, then 0 would imply an exit. Refer to y-axis on right.
-
 3. The green shaded area represents the period when we are long on the portfolio stocks.
 
 Cumulative strategy returns
